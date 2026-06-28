@@ -6,8 +6,9 @@ console.log('私のニックネームは' + nickname + 'です。年齢は' + ag
 
 //Q2
 let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
+let template = `私の好きな言語は${languages[0]}です。次は${languages[3]}を勉強してみたいです。`
 
-console.log('私の好きな言語は' + languages[0] + 'です。次は' + languages[3] + 'を勉強してみたいです。');
+console.log(template);
 
 //Q3
 let user = {
@@ -42,11 +43,12 @@ const game = playerList[1].favorites[1];
 console.log(game);
 
 //Q5
-const age1 = playerList[0].age;
-const age2 = playerList[1].age;
-const age3 = playerList[2].age;
-const ave = (age1 + age2 + age3)
-console.log(ave/3);
+let ages = 0;
+for (let i = 0; i < playerList.length; i++) {
+  ages += playerList[i].age;
+}
+const ave = ages / playerList.length;
+console.log(ave);
 
 //Q6-1
 function sayHello() {
@@ -57,7 +59,7 @@ sayHello();
 
 //Q6-2
 let sayWorld = function(){
-  console.log('sayWorld');
+  console.log('World');
 }
 
 sayWorld();
@@ -113,7 +115,7 @@ console.log('5を3で割った余りは' + amari + 'です。');
 //応用編問題
 
 //Q1
-const number = Math.floor(Math.random() * 9) + 1;
+const number = Math.floor(Math.random() * 10);
 console.log(number);
 
 ///Q2
